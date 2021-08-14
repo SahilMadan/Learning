@@ -54,6 +54,11 @@ setup:
 		${FLAGS} ${STB} -o ${BUILDIR}/4_1 && \
 		${BUILDIR}/4_1
 
+4_2: ${SRCDIR}/4_2_textures_combined.cpp shader_simple
+	${CC} ${SRCDIR}/4_2_textures_combined.cpp ${SHADER_S} \
+		${FLAGS} ${STB} -o ${BUILDIR}/4_2 && \
+		${BUILDIR}/4_2
+
 shader_simple: ${SRCDIR}/shader_simple.cpp
 	${CC} ${SRCDIR}/shader_simple.cpp \
 		${FLAGS} -c -o ${SHADER_S}
