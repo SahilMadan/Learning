@@ -41,7 +41,7 @@ int main() {
   }
 
   // Build and compile our shader program
-  Shader shader("shaders/3_3_vertex_shader.glsl", "shaders/3_3_fragment_shader.glsl");
+  Shader shader("shaders/3_3_shader.vs", "shaders/3_3_shader.fs");
 
 
   // Set up vertex data (and buffer(s)) and configure vertex attributes
