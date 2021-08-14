@@ -25,6 +25,14 @@ build_dir:
 	${CC} 2_2_hello_triangle_indexed.cpp ${FLAGS} ${DEFAULTLIBS} -o ${BUILDIR}/2_2 &&\
 		${BUILDIR}/2_2
 
+3_1: 3_1_shaders_uniform.cpp 
+	${CC} 3_1_shaders_uniform.cpp ${FLAGS} ${DEFAULTLIBS} -o ${BUILDIR}/3_1 &&\
+		${BUILDIR}/3_1
+
+3_2: 3_2_shaders_interpolation.cpp 
+	${CC} 3_2_shaders_interpolation.cpp ${FLAGS} ${DEFAULTLIBS} -o ${BUILDIR}/3_2 &&\
+		${BUILDIR}/3_2
+
 clean:
 	rm -rf ${BUILDIR}/*
 	
