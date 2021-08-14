@@ -149,7 +149,8 @@ int main() {
     // Update shader uniform
     float time_value = glfwGetTime();
     float green_value = std::sin(time_value) / 2.0f + 0.5f;
-    int vertex_color_location = glGetUniformLocation(shader_program, "ourColor");
+    int vertex_color_location =
+        glGetUniformLocation(shader_program, "ourColor");
     glUniform4f(vertex_color_location, 0.0f, green_value, 0.0f, 1.0f);
 
     glDrawArrays(GL_TRIANGLES, 0, 3);

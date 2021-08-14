@@ -43,7 +43,6 @@ int main() {
   // Build and compile our shader program
   Shader shader("shaders/3_3_shader.vs", "shaders/3_3_shader.fs");
 
-
   // Set up vertex data (and buffer(s)) and configure vertex attributes
   // Bind the vertex array object first, then bind and set the vertex buffer(s),
   // then configure the vertex attribute(s)
