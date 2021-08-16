@@ -80,6 +80,11 @@ setup:
 		${FLAGS} ${STB} -o ${BUILDIR}/6_3 && \
 		${BUILDIR}/6_3
 
+7_1: ${SRCDIR}/7_1_camera_circle.cpp shader_m
+	${CC} ${SRCDIR}/7_1_camera_circle.cpp ${SHADER_M} \
+		${FLAGS} ${STB} -o ${BUILDIR}/7_1 && \
+		${BUILDIR}/7_1
+
 shader_simple: ${SRCDIR}/shader_simple.cpp
 	${CC} ${SRCDIR}/shader_simple.cpp \
 		${FLAGS} -c -o ${SHADER_S} 
