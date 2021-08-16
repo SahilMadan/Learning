@@ -5,6 +5,7 @@ SRCDIR=./src
 BUILDIR=./build
 OBJDIR=./obj
 FLAGS=-Wall -Werror -Wpedantic -Wextra -lglad -lglfw
+CAMERA=${OBJDIR}/camera.o
 SHADER_S=${OBJDIR}/shader_simple.o
 SHADER_M=${OBJDIR}/shader_m.o
 STB=-lstb
@@ -95,6 +96,15 @@ setup:
 		${FLAGS} ${STB} -o ${BUILDIR}/7_3 && \
 		${BUILDIR}/7_3
 
+7_4: ${SRCDIR}/7_4_camera_class.cpp shader_m camera
+	${CC} ${SRCDIR}/7_4_camera_class.cpp ${SHADER_M} ${CAMERA} \
+		${FLAGS} ${STB} -o ${BUILDIR}/7_4 && \
+		${BUILDIR}/7_4
+
+camera: ${SRCDIR}/camera.cpp
+	${CC} ${SRCDIR}/camera.cpp \
+		${FLAGS} -c -o ${CAMERA} 
+	
 shader_simple: ${SRCDIR}/shader_simple.cpp
 	${CC} ${SRCDIR}/shader_simple.cpp \
 		${FLAGS} -c -o ${SHADER_S} 
