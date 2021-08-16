@@ -90,6 +90,11 @@ setup:
 		${FLAGS} ${STB} -o ${BUILDIR}/7_2 && \
 		${BUILDIR}/7_2
 
+7_3: ${SRCDIR}/7_3_camera_mouse_zoom.cpp shader_m
+	${CC} ${SRCDIR}/7_3_camera_mouse_zoom.cpp ${SHADER_M} \
+		${FLAGS} ${STB} -o ${BUILDIR}/7_3 && \
+		${BUILDIR}/7_3
+
 shader_simple: ${SRCDIR}/shader_simple.cpp
 	${CC} ${SRCDIR}/shader_simple.cpp \
 		${FLAGS} -c -o ${SHADER_S} 
