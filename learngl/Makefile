@@ -70,6 +70,11 @@ setup:
 		${FLAGS} ${STB} -o ${BUILDIR}/6_1 && \
 		${BUILDIR}/6_1
 
+6_2: ${SRCDIR}/6_2_coordinate_systems_depth.cpp shader_m
+	${CC} ${SRCDIR}/6_2_coordinate_systems_depth.cpp ${SHADER_M} \
+		${FLAGS} ${STB} -o ${BUILDIR}/6_2 && \
+		${BUILDIR}/6_2
+
 shader_simple: ${SRCDIR}/shader_simple.cpp
 	${CC} ${SRCDIR}/shader_simple.cpp \
 		${FLAGS} -c -o ${SHADER_S} 
