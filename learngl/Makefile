@@ -85,6 +85,11 @@ setup:
 		${FLAGS} ${STB} -o ${BUILDIR}/7_1 && \
 		${BUILDIR}/7_1
 
+7_2: ${SRCDIR}/7_2_camera_keyboard.cpp shader_m
+	${CC} ${SRCDIR}/7_2_camera_keyboard.cpp ${SHADER_M} \
+		${FLAGS} ${STB} -o ${BUILDIR}/7_2 && \
+		${BUILDIR}/7_2
+
 shader_simple: ${SRCDIR}/shader_simple.cpp
 	${CC} ${SRCDIR}/shader_simple.cpp \
 		${FLAGS} -c -o ${SHADER_S} 
