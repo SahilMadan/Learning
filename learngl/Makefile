@@ -6,6 +6,7 @@ BUILDIR=./build
 OBJDIR=./obj
 FLAGS=-Wall -Werror -Wpedantic -Wextra -lglad -lglfw
 SHADER_S=${OBJDIR}/shader_simple.o
+SHADER_M=${OBJDIR}/shader_m.o
 STB=-lstb
 
 setup:
@@ -59,10 +60,18 @@ setup:
 		${FLAGS} ${STB} -o ${BUILDIR}/4_2 && \
 		${BUILDIR}/4_2
 
+5_1: ${SRCDIR}/5_1_transformations.cpp shader_m
+	${CC} ${SRCDIR}/5_1_transformations.cpp ${SHADER_M} \
+		${FLAGS} ${STB} -o ${BUILDIR}/5_1 && \
+		${BUILDIR}/5_1
+
 shader_simple: ${SRCDIR}/shader_simple.cpp
 	${CC} ${SRCDIR}/shader_simple.cpp \
-		${FLAGS} -c -o ${SHADER_S}
+		${FLAGS} -c -o ${SHADER_S} 
 
+shader_m: ${SRCDIR}/shader_m.cpp
+	${CC} ${SRCDIR}/shader_m.cpp \
+		${FLAGS} -c -o ${SHADER_M} 
 
 clean:
 	rm -rf ${BUILDIR}
