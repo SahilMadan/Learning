@@ -327,7 +327,7 @@ void MouseCursorCallback(GLFWwindow*, double x_position, double y_position) {
   }
 
   float x_offset = x_position - mouse_last_x;
-  float y_offset = y_position - mouse_last_y;
+  float y_offset = (y_position - mouse_last_y) * -1;
   mouse_last_x = x_position;
   mouse_last_y = y_position;
 
