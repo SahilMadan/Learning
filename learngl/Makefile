@@ -4,11 +4,11 @@ CC=g++
 SRCDIR=./src
 BUILDIR=./build
 OBJDIR=./obj
-FLAGS=-Wall -Werror -Wpedantic -Wextra -lglad -lglfw
+FLAGS=-Wall -Werror -Wpedantic -Wextra -lglad -lglfw -ldl
 CAMERA=${OBJDIR}/camera.o
 SHADER_S=${OBJDIR}/shader_simple.o
 SHADER_M=${OBJDIR}/shader_m.o
-STB=-lstb
+# STB=-lstb
 
 setup:
 	@echo "Setting up..."
