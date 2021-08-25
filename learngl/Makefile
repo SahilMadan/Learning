@@ -106,10 +106,10 @@ setup:
 		${FLAGS} ${STB} -o ${BUILDIR}/8_1 && \
 		${BUILDIR}/8_1
 
-8_2: ${SRCDIR}/8_2_basic_lighting_diffuse.cpp shader_m camera
-	${CC} ${SRCDIR}/8_2_basic_lighting_diffuse.cpp ${SHADER_M} ${CAMERA} \
-		${FLAGS} ${STB} -o ${BUILDIR}/8_2 && \
-		${BUILDIR}/8_2
+9_1: ${SRCDIR}/9_1_basic_lighting_diffuse.cpp shader_m camera
+	${CC} ${SRCDIR}/9_1_basic_lighting_diffuse.cpp ${SHADER_M} ${CAMERA} \
+		${FLAGS} ${STB} -o ${BUILDIR}/9_1 && \
+		${BUILDIR}/9_1
 
 camera: ${SRCDIR}/camera.cpp
 	${CC} ${SRCDIR}/camera.cpp \
