@@ -101,6 +101,11 @@ setup:
 		${FLAGS} ${STB} -o ${BUILDIR}/7_4 && \
 		${BUILDIR}/7_4
 
+8_1: ${SRCDIR}/8_1_colors.cpp shader_m camera
+	${CC} ${SRCDIR}/8_1_colors.cpp ${SHADER_M} ${CAMERA} \
+		${FLAGS} ${STB} -o ${BUILDIR}/8_1 && \
+		${BUILDIR}/8_1
+
 camera: ${SRCDIR}/camera.cpp
 	${CC} ${SRCDIR}/camera.cpp \
 		${FLAGS} -c -o ${CAMERA} 
