@@ -124,7 +124,7 @@ int main() {
   };
 
   Shader shader("shaders/9_1_basic_lighting_diffuse.vs",
-                "shaders/9_1_basic_lighting_diffuse.fs");
+                "shaders/9_2_basic_lighting_specular.fs");
 
   unsigned int vao;
   glGenVertexArrays(1, &vao);
@@ -187,6 +187,7 @@ int main() {
     shader.SetVec3("objectColor", 1.0f, 0.5f, 0.31f);
     shader.SetVec3("lightColor", 1.0f, 1.0f, 1.0f);
     shader.SetVec3("lightPosition", kLightPosition);
+    shader.SetVec3("viewPosition", camera.Position());
 
     // Camera
 

@@ -111,6 +111,11 @@ setup:
 		${FLAGS} ${STB} -o ${BUILDIR}/9_1 && \
 		${BUILDIR}/9_1
 
+9_2: ${SRCDIR}/9_2_basic_lighting_specular.cpp shader_m camera
+	${CC} ${SRCDIR}/9_2_basic_lighting_specular.cpp ${SHADER_M} ${CAMERA} \
+		${FLAGS} ${STB} -o ${BUILDIR}/9_2 && \
+		${BUILDIR}/9_2
+
 camera: ${SRCDIR}/camera.cpp
 	${CC} ${SRCDIR}/camera.cpp \
 		${FLAGS} -c -o ${CAMERA} 
